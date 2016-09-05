@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Laurent Arnoud
+  description: provides Docker Debian packages
+  license: BSD
+  min_ansible_version: 1.9
+  platforms:
+    - name: Debian
+      versions:
+        - all
+  categories:
+    - system
+    - networking
+dependencies: []

@@ -1,0 +1,13 @@
+docker_package: docker-engine
+docker_distribution_release: 'jessie'
+docker_version: "1.12.1-0~{{ docker_distribution_release }}"
+docker_pin_priority: 1000
+docker_apt_repository_host: apt.dockerproject.org
+docker_apt_key_url: 'https://{{ docker_apt_repository_host }}/gpg'
+docker_apt_repository_url: 'https://{{ docker_apt_repository_host }}/repo'
+
+# Override default systemd ExecStart
+# More info at https://docs.docker.com/engine/admin/systemd/
+docker_override_options: false
+docker_override_path: /etc/systemd/system/docker.service.d
+docker_daemon_options: "-H fd://"

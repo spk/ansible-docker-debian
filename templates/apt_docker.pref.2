@@ -1,0 +1,9 @@
+# {{ ansible_managed }}
+
+Package: {{ docker_package }}
+Pin: version {{ docker_version }}
+Pin-Priority: {{ docker_pin_priority + 1 }}
+
+Package: {{ docker_package }}
+Pin: origin {{ docker_apt_repository_host }}
+Pin-Priority: {{ docker_pin_priority }}
