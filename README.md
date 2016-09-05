@@ -25,4 +25,4 @@ BSD
 
 ---
 [![Build](https://img.shields.io/travis-ci/spk/ansible-docker-debian.svg)](https://travis-ci.org/spk/ansible-docker-debian)
-[![Ansible Galaxy](https://img.shields.io/ansible/role/XXXX.svg)](https://galaxy.ansible.com/spk/docker-debian/)
+[![Ansible Galaxy](https://img.shields.io/ansible/role/11888.svg)](https://galaxy.ansible.com/spk/docker-debian/)
