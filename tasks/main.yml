@@ -26,7 +26,7 @@
 
 - name: Add docker repository
   apt_repository:
-    repo: 'deb {{ docker_apt_repository_url }} debian-{{ docker_distribution_release }} main'
+    repo: 'deb {{ docker_apt_repository_url }} {{ docker_distribution }}-{{ docker_distribution_release }} main'
     state: present
 
 - name: Add docker repository preferences

@@ -1,4 +1,5 @@
 docker_package: docker-engine
+docker_distribution: "{{ ansible_distribution | lower }}"
 docker_distribution_release: 'jessie'
 docker_version: "1.12.1-0~{{ docker_distribution_release }}"
 docker_pin_priority: 1000
