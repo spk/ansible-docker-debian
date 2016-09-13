@@ -2,6 +2,16 @@
 
 Provides Docker Debian packages from <https://apt.dockerproject.org/repo>.
 
+Support also Ubuntu with systemd.
+
+## Why
+
+* No ` curl https://get.docker.com/ | sh`, fully predictable
+    and idempotent installation.
+* Ability to change daemon arguments with [systemd override](https://docs.docker.com/engine/admin/systemd/),
+    see
+    [docker_daemon_options](https://github.com/spk/ansible-docker-debian/blob/master/defaults/main.yml#L14)
+
 ## Installation
 
 ```
