@@ -5,4 +5,5 @@ services:
   - docker
 
 script:
-  - docker build .
+  - docker build --file Dockerfile.debian .
+  - docker build --file Dockerfile.ubuntu .
