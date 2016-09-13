@@ -23,11 +23,11 @@ ansible-galaxy install spk.docker-debian
 See
 [defaults/main.yml](https://github.com/spk/ansible-docker-debian/blob/master/defaults/main.yml)
 
-# Dependencies
+## Dependencies
 
 None
 
-# License
+## License
 
 (c) 2016 Laurent Arnoud <laurent@spkdev.net>
 
