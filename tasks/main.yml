@@ -48,7 +48,7 @@
 - name: Configure docker
   template:
     src: service_override.conf
-    dest: /etc/systemd/system/docker.service.d/override.conf
+    dest: "{{ docker_override_path }}/override.conf"
     owner: root
     mode: 0644
   when: docker_override_options
