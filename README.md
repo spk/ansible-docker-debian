@@ -29,7 +29,7 @@ None
 
 ## License
 
-(c) 2016 Laurent Arnoud <laurent@spkdev.net>
+(c) 2016-2017 Laurent Arnoud <laurent@spkdev.net>
 
 BSD
 
