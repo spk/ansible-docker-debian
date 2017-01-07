@@ -36,7 +36,7 @@
 
 - name: Install docker
   apt:
-    pkg: "{{ docker_package }}={{ docker_version }}"
+    pkg: "{{ docker_package }}={{ docker_debian_version }}"
     state: installed
 
 - name: Create docker.service.d directory
