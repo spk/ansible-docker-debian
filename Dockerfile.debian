@@ -19,6 +19,7 @@ RUN set -ex \
     && apt-get update -qqy \
     && apt-get -qqy --no-install-recommends install \
         python-setuptools python-pip $buildDeps \
+    && pip install --upgrade setuptools \
     && pip install ansible ansible-lint \
     && apt-get purge -y --auto-remove $buildDeps \
     && apt-get autoremove -y \
