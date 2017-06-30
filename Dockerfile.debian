@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch
 
 MAINTAINER Laurent Arnoud <laurent@spkdev.net>
 
