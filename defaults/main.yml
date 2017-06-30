@@ -1,9 +1,9 @@
 docker_package: docker-engine
 docker_distribution: "{{ ansible_distribution | lower }}"
 docker_distribution_release: "{{ ansible_distribution_release }}"
-docker_version: "1.13.0"
+docker_version: "17.05.0"
 # https://apt.dockerproject.org/repo/pool/main/d/docker-engine/
-docker_debian_version: "{{ docker_version }}-0~{{ docker_distribution }}-{{ docker_distribution_release }}"
+docker_debian_version: "{{ docker_version }}~ce-0~{{ docker_distribution }}-{{ docker_distribution_release }}"
 docker_pin_priority: 1000
 docker_apt_repository_host: apt.dockerproject.org
 docker_apt_key_url: 'https://{{ docker_apt_repository_host }}/gpg'
