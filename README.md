@@ -1,15 +1,14 @@
 # Ansible Docker Debian
 
-Provides Docker Debian packages from <https://apt.dockerproject.org/repo>.
+Provides Docker Debian packages from <https://download.docker.com/linux/>.
 
 Support also Ubuntu with systemd.
 
 ## Why
 
-* No ` curl https://get.docker.com/ | sh`, fully predictable
-    and idempotent installation.
-* Ability to change daemon arguments with [systemd override](https://docs.docker.com/engine/admin/systemd/),
-    see
+* No `curl | sh`, fully predictable and idempotent installation.
+* Ability to change daemon arguments with
+    [systemd override](https://docs.docker.com/engine/admin/systemd/), see
     [docker_daemon_options](https://github.com/spk/ansible-docker-debian/blob/master/defaults/main.yml#L14)
 
 ## Installation
@@ -29,9 +28,9 @@ None
 
 ## License
 
-(c) 2016-2017 Laurent Arnoud <laurent@spkdev.net>
-
 BSD
+
+Copyright (c) 2016-2017 Laurent Arnoud <laurent@spkdev.net>
 
 ---
 [![Build](https://img.shields.io/travis-ci/spk/ansible-docker-debian.svg)](https://travis-ci.org/spk/ansible-docker-debian)

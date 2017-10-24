@@ -2,7 +2,7 @@ docker_package: docker-ce
 docker_distribution: "{{ ansible_distribution | lower }}"
 docker_distribution_release: "{{ ansible_lsb.codename | lower }}"
 docker_version: "17.09.0"
-# https://apt.dockerproject.org/repo/pool/main/d/docker-engine/
+# https://download.docker.com/linux/
 docker_debian_version: "{{ docker_version }}~ce-0~{{ docker_distribution }}"
 docker_pin_priority: 1000
 docker_apt_repository_host: download.docker.com
