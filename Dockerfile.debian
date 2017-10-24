@@ -18,7 +18,7 @@ RUN set -ex \
     && buildDeps='gcc python-dev libyaml-dev libffi-dev libssl-dev' \
     && apt-get update -qqy \
     && apt-get -qqy --no-install-recommends install \
-        python-setuptools python-pip $buildDeps \
+        lsb-release python-setuptools python-pip $buildDeps \
     && pip install --upgrade setuptools \
     && pip install ansible ansible-lint \
     && apt-get purge -y --auto-remove $buildDeps \

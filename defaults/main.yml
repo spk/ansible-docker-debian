@@ -1,13 +1,13 @@
-docker_package: docker-engine
+docker_package: docker-ce
 docker_distribution: "{{ ansible_distribution | lower }}"
-docker_distribution_release: "{{ ansible_distribution_release }}"
-docker_version: "17.05.0"
+docker_distribution_release: "{{ ansible_lsb.codename | lower }}"
+docker_version: "17.09.0"
 # https://apt.dockerproject.org/repo/pool/main/d/docker-engine/
-docker_debian_version: "{{ docker_version }}~ce-0~{{ docker_distribution }}-{{ docker_distribution_release }}"
+docker_debian_version: "{{ docker_version }}~ce-0~{{ docker_distribution }}"
 docker_pin_priority: 1000
-docker_apt_repository_host: apt.dockerproject.org
-docker_apt_key_url: 'https://{{ docker_apt_repository_host }}/gpg'
-docker_apt_repository_url: 'https://{{ docker_apt_repository_host }}/repo'
+docker_apt_repository_host: download.docker.com
+docker_apt_key_url: 'https://{{ docker_apt_repository_host }}/linux/{{ docker_distribution }}/gpg'
+docker_apt_repository_url: 'https://{{ docker_apt_repository_host }}/linux'
 
 # Override default systemd ExecStart
 # More info at https://docs.docker.com/engine/admin/systemd/

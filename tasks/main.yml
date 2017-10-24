@@ -7,6 +7,8 @@
   with_items:
     - lxc-docker
     - docker.io
+    - docker
+    - docker-engine
 
 - name: Ensure the system can use the HTTPS transport for APT
   stat:
@@ -26,7 +28,7 @@
 
 - name: Add docker repository
   apt_repository:
-    repo: 'deb {{ docker_apt_repository_url }} {{ docker_distribution }}-{{ docker_distribution_release }} main'
+    repo: 'deb {{ docker_apt_repository_url }}/{{ docker_distribution }} {{ docker_distribution_release }} stable'
     state: present
 
 - name: Add docker repository preferences
