@@ -14,3 +14,10 @@ docker_apt_repository_url: 'https://{{ docker_apt_repository_host }}/linux'
 docker_override_options: false
 docker_override_path: /etc/systemd/system/docker.service.d
 docker_daemon_options: "-H fd://"
+# https://docs.docker.com/engine/reference/commandline/system_prune/
+docker_cron_prune: false
+# check special_time option
+# https://docs.ansible.com/ansible/latest/modules/cron_module.html
+docker_cleanup_time: daily
+# if you want to prune volumes not used add `--volumes`
+docker_cron_prune_cmd: "docker system prune -f"

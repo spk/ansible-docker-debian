@@ -57,3 +57,12 @@
   notify:
     - reload systemd
     - restart docker
+
+- name: Add prune command to crontab
+  cron:
+    name: "docker cleanup"
+    special_time: "{{ docker_cleanup_time }}"
+    user: "root"
+    job: "{{ docker_cron_prune_cmd }}"
+    cron_file: docker-cleanup
+  when: docker_cron_prune
