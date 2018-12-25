@@ -18,11 +18,15 @@
     pkg: apt-transport-https
     state: installed
   when: not apt_https_transport.stat.exists
+  register: result
+  until: result is succeeded
 
 - name: Import docker GPG key to apt
   apt_key:
     url: "{{ docker_apt_key_url }}"
     state: present
+  register: result
+  until: result is succeeded
 
 - name: Add docker repository
   apt_repository:
@@ -38,6 +42,8 @@
   apt:
     pkg: "{{ docker_package }}={{ docker_debian_version }}"
     state: present
+  register: result
+  until: result is succeeded
 
 - name: Create docker.service.d directory
   file:
