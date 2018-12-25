@@ -1,14 +1,12 @@
 ---
 - name: Ensure legacy packages are absent
   apt:
-    pkg: "{{ item }}"
+    pkg:
+      - lxc-docker
+      - docker
+      - docker-engine
     state: absent
-    purge: yes
-  with_items:
-    - lxc-docker
-    - docker.io
-    - docker
-    - docker-engine
+    purge: true
 
 - name: Ensure the system can use the HTTPS transport for APT
   stat:
@@ -39,7 +37,7 @@
 - name: Install docker
   apt:
     pkg: "{{ docker_package }}={{ docker_debian_version }}"
-    state: installed
+    state: present
 
 - name: Create docker.service.d directory
   file:

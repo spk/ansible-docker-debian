@@ -1,3 +1,4 @@
+---
 docker_package: docker-ce
 docker_distribution: "{{ ansible_distribution | lower }}"
 docker_distribution_release: "{{ ansible_lsb.codename | lower }}"

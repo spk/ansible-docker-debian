@@ -32,6 +32,14 @@ ansible-galaxy install spk.docker-debian
 See
 [defaults/main.yml](https://github.com/spk/ansible-docker-debian/blob/master/defaults/main.yml)
 
+The defaults will install package from docker.com if you want to use Debian
+official package use:
+
+```
+docker_package: docker.io
+docker_debian_version: "{{ docker_version }}+dfsg1-2"
+```
+
 ## Dependencies
 
 None
