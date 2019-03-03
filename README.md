@@ -52,5 +52,5 @@ BSD
 Copyright (c) 2016-2019 Laurent Arnoud <laurent@spkdev.net>
 
 ---
-[![Build](https://img.shields.io/travis-ci/spk/ansible-docker-debian.svg)](https://travis-ci.org/spk/ansible-docker-debian)
+[![Build](https://img.shields.io/travis/spk/ansible-docker-debian.svg)](https://travis-ci.org/spk/ansible-docker-debian)
 [![Ansible Galaxy](https://img.shields.io/ansible/role/11888.svg)](https://galaxy.ansible.com/spk/docker-debian/)
