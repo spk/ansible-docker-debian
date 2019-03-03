@@ -37,7 +37,8 @@ official package use:
 
 ```
 docker_package: docker.io
-docker_debian_version: "{{ docker_version }}+dfsg1-2"
+docker_debian_version: "{{ docker_version }}+dfsg1-5"
+docker_use_debian_repository: true
 ```
 
 ## Dependencies

@@ -27,16 +27,19 @@
     state: present
   register: result
   until: result is succeeded
+  when: not docker_use_debian_repository
 
 - name: Add docker repository
   apt_repository:
     repo: 'deb {{ docker_apt_repository_url }}/{{ docker_distribution }} {{ docker_distribution_release }} stable'
     state: present
+  when: not docker_use_debian_repository
 
 - name: Add docker repository preferences
   template:
     src: apt_docker.pref.2
     dest: /etc/apt/preferences.d/docker.pref
+  when: not docker_use_debian_repository
 
 - name: Install docker
   apt:
