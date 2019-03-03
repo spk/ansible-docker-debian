@@ -24,7 +24,7 @@ ansible-galaxy install spk.docker-debian
 
 ```
 - src: spk.docker-debian
-  version: 'v3.1.1'
+  version: 'v3.2.0'
 ```
 
 ## Configurations
@@ -49,7 +49,7 @@ None
 
 BSD
 
-Copyright (c) 2016-2018 Laurent Arnoud <laurent@spkdev.net>
+Copyright (c) 2016-2019 Laurent Arnoud <laurent@spkdev.net>
 
 ---
 [![Build](https://img.shields.io/travis-ci/spk/ansible-docker-debian.svg)](https://travis-ci.org/spk/ansible-docker-debian)
