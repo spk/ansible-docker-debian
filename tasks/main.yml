@@ -56,7 +56,7 @@
 
 - name: Configure docker
   template:
-    src: service_override.conf
+    src: service_override.conf.j2
     dest: "{{ docker_override_path }}/override.conf"
     owner: root
     mode: 0644

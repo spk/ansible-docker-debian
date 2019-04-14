@@ -17,6 +17,7 @@ docker_apt_repository_url: 'https://{{ docker_apt_repository_host }}/linux'
 # More info at https://docs.docker.com/engine/admin/systemd/
 docker_override_options: false
 docker_override_path: /etc/systemd/system/docker.service.d
+docker_dockerd_path: /usr/bin/dockerd
 docker_daemon_options: "-H fd://"
 # https://docs.docker.com/engine/reference/commandline/system_prune/
 docker_cron_prune: false
