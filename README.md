@@ -38,7 +38,7 @@ The defaults will install package from docker.com if you want to use
 ```
 docker_use_debian_repository: true
 docker_package: docker.io
-docker_debian_version: "{{ docker_version }}+dfsg1-5+b10"
+docker_debian_version: "{{ docker_version }}+dfsg1-7.1"
 docker_dockerd_path: /usr/sbin/dockerd
 ```
 

@@ -41,13 +41,6 @@
     dest: /etc/apt/preferences.d/docker.pref
   when: not docker_use_debian_repository
 
-- name: Install docker
-  apt:
-    pkg: "{{ docker_package }}={{ docker_debian_version }}"
-    state: present
-  register: result
-  until: result is succeeded
-
 - name: Create docker.service.d directory
   file:
     path: "{{ docker_override_path }}"
@@ -64,6 +57,13 @@
   notify:
     - reload systemd
     - restart docker
+
+- name: Install docker
+  apt:
+    pkg: "{{ docker_package }}={{ docker_debian_version }}"
+    state: present
+  register: result
+  until: result is succeeded
 
 - name: Add prune command to crontab
   cron:
